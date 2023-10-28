@@ -1,0 +1,42 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPagePrincipal.master.cs" Inherits="AgendaWebApplication.MasterPagePrincipal" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <header><h1>Agenda WEB</h1></header>
+        <nav>
+            <asp:Menu ID="MenuHead" runat="server" Orientation="Horizontal" RenderingMode="List" BackColor="#B5C7DE" DynamicHorizontalOffset="2" ForeColor="#284E98" Font-Bold="True" Font-Names="Verdana" Font-Size="Medium" StaticSubMenuIndent="10px" Width="280px">
+                <DynamicHoverStyle BackColor="#284E98" ForeColor="White" />
+                <DynamicMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                <DynamicMenuStyle BackColor="#B5C7DE" />
+                <DynamicSelectedStyle BackColor="#507CD1" />
+                <Items>
+                    <asp:MenuItem NavigateUrl="~/index.aspx" Text="Home" Value="Home"></asp:MenuItem>
+                    <asp:MenuItem NavigateUrl="~/usuarios.aspx" Text="Usuários" Value="Usuários"></asp:MenuItem>
+                    <asp:MenuItem NavigateUrl="~/contatos.aspx" Text="Contatos" Value="Contatos"></asp:MenuItem>
+                    <asp:MenuItem Text="Sair" Value="Sair"></asp:MenuItem>
+                </Items>
+                <StaticHoverStyle BackColor="#284E98" ForeColor="White" />
+                <StaticMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                <StaticSelectedStyle BackColor="#507CD1" />
+            </asp:Menu>
+        </nav>
+        <main>
+            <div>
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+        </main>
+        <footer>
+            <p>&copy; Site desenvolvido por <asp:HyperLink runat="server" ID="hlGithub" Font-Bold="True" NavigateUrl="https://github.com/GetulioCastro" Target="_blank">G# Desenvolvimento</asp:HyperLink></p>
+        </footer>
+    </form>
+</body>
+</html>
