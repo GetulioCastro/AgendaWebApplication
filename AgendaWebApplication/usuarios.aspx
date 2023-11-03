@@ -127,8 +127,8 @@
         </SelectedItemTemplate>
 </asp:ListView>
     <asp:SqlDataSource ID="SqlDataSourceU" runat="server" ConnectionString="<%$ ConnectionStrings:AgendaDB %>" DeleteCommand="DELETE FROM [Usuario] WHERE [email] = @email" InsertCommand="INSERT INTO [Usuario] ([email], [nome], [senha]) VALUES (@email, @nome, @senha)" SelectCommand="SELECT [email], [nome], [senha] FROM [Usuario]" UpdateCommand="UPDATE [Usuario] SET [nome] = @nome, [senha] = @senha WHERE [email] = @email" OnInserted="SqlDataSourceU_Inserted" OnUpdated="SqlDataSourceU_Updated">
-        <DeleteParameters>
-            <asp:Parameter Name="email" Type="String" />
+    <DeleteParameters>
+        <asp:Parameter Name="email" Type="String" />
     </DeleteParameters>
     <InsertParameters>
         <asp:Parameter Name="email" Type="String" />

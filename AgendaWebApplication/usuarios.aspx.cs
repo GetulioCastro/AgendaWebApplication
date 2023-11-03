@@ -20,7 +20,8 @@ namespace AgendaWebApplication
         {
             if (e.Exception != null)
             {
-                lblMensagem.Text = "Inserindo um registro duplicado ou com campos em branco!";
+                Response.Write("<script>alert('Inserindo um registro duplicado ou com campos em branco!');</script>");
+                //lblMensagem.Text = "Inserindo um registro duplicado ou com campos em branco!";
                 e.ExceptionHandled = true;
             }
         }
@@ -29,7 +30,8 @@ namespace AgendaWebApplication
         {
             if (e.Exception != null)
             {
-                lblMensagem.Text = "Alterando um registro sem informar todos os campos!";
+                Response.Write("<script>alert('Alterando um registro sem informar todos os campos!');</script>");
+                //lblMensagem.Text = "Alterando um registro sem informar todos os campos!";
                 e.ExceptionHandled = true;
             }
         }

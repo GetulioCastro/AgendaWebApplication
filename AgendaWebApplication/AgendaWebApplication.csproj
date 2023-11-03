@@ -73,6 +73,7 @@
     </Content>
     <Content Include="Imagens\agenda.jpg" />
     <Content Include="index.aspx" />
+    <Content Include="login.aspx" />
     <Content Include="usuarios.aspx" />
     <Content Include="Web.config" />
     <Content Include="contatos.aspx" />
@@ -84,6 +85,13 @@
     </Compile>
     <Compile Include="index.aspx.designer.cs">
       <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="login.aspx.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="login.aspx.designer.cs">
+      <DependentUpon>login.aspx</DependentUpon>
     </Compile>
     <Compile Include="MasterPagePrincipal.Master.cs">
       <DependentUpon>MasterPagePrincipal.Master</DependentUpon>

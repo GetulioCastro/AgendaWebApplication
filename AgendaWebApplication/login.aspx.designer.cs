@@ -11,44 +11,17 @@ namespace AgendaWebApplication
 {
 
 
-    public partial class WebForm1
+    public partial class login
     {
 
         /// <summary>
-        /// lblContatos control.
+        /// form1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblContatos;
-
-        /// <summary>
-        /// lblInserir control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblInserir;
-
-        /// <summary>
-        /// lblNome control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblNome;
-
-        /// <summary>
-        /// txbNome control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txbNome;
+        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
         /// lblEmail control.
@@ -69,48 +42,39 @@ namespace AgendaWebApplication
         protected global::System.Web.UI.WebControls.TextBox txbEmail;
 
         /// <summary>
-        /// lblTelefone control.
+        /// lblSenha control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblTelefone;
+        protected global::System.Web.UI.WebControls.Label lblSenha;
 
         /// <summary>
-        /// txbTeledfone control.
+        /// txbSenha control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txbTeledfone;
+        protected global::System.Web.UI.WebControls.TextBox txbSenha;
 
         /// <summary>
-        /// btnInserir control.
+        /// btnLogar control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnInserir;
+        protected global::System.Web.UI.WebControls.Button btnLogar;
 
         /// <summary>
-        /// gvContatos control.
+        /// lblMsg control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView gvContatos;
-
-        /// <summary>
-        /// SqlDataSourceC control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSourceC;
+        protected global::System.Web.UI.WebControls.Label lblMsg;
     }
 }
