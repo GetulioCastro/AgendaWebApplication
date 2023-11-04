@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
+using System.Web.Security;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
@@ -39,17 +40,17 @@ namespace AgendaWebApplication
             SqlDataReader reader = cmd.ExecuteReader();
             if (reader.HasRows)
             {
-                //cookie
-                HttpCookie login = new HttpCookie("login", txbEmail.Text);
-                Response.Cookies.Add (login);
-                //direciona para a página principal
+                FormsAuthentication.RedirectFromLoginPage(email, false);
                 Response.Redirect("~/index.aspx");
+
             }
             else
             {
                 Response.Write("<script>alert('E-mail ou Senha incorretos!')</script>");
-                //lblMsg.Text = "E-mail ou Senha incorretos!";
+
             }
+
+            FormsAuthentication.SignOut();
 
         }
     }

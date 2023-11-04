@@ -33,13 +33,13 @@ namespace AgendaWebApplication
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// MenuHead control.
+        /// MenuHeader control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Menu MenuHead;
+        protected global::System.Web.UI.WebControls.Menu MenuHeader;
 
         /// <summary>
         /// ContentPlaceHolder1 control.

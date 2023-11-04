@@ -5,6 +5,11 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Login</title>
+    <style>
+        #form1{
+            margin: 15px;
+        }
+    </style>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -12,11 +17,11 @@
             <asp:Label ID="lblEmail" runat="server" Text="E-Mail:" Font-Bold="True"></asp:Label>
             <br />
             <asp:TextBox ID="txbEmail" runat="server" ToolTip="Digite seu e-mail para efetuar logon" Width="300px"></asp:TextBox>
-            <br />
+            <br /><br />
             <asp:Label ID="lblSenha" runat="server" Text="Senha:" Font-Bold="True"></asp:Label>
             <br />
             <asp:TextBox ID="txbSenha" runat="server" ToolTip="Digite sua senha para efetuar logon" Width="300px" TextMode="Password"></asp:TextBox>
-            <br />
+            <br /><br />
             <asp:Button ID="btnLogar" runat="server" Text="Logar" BackColor="#999999" OnClick="btnLogar_Click" />
         </div>
         <div>

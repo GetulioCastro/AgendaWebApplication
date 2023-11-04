@@ -1,0 +1,37 @@
+﻿body {
+    margin: 0 auto;
+    padding: 0;
+}
+
+header {
+    margin: 0 auto;
+    width: 80%;
+    height: 70px;
+    background-color: #B5C7DE;
+    padding: 10px;
+}
+
+header h1 {
+    color: white;
+    float: left;
+}
+
+nav {
+    float: right;
+    top: initial;
+}
+
+main {
+    margin: 0 auto;
+    width: 80%;
+    background-color: lightgray;
+    padding: 10px;
+}
+
+footer {
+    margin: 0 auto;
+    width: 80%;
+    height: 40px;
+    background-color: #B5C7DE;
+    padding: 10px;
+}
