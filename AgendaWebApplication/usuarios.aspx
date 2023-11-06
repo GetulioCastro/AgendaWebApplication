@@ -142,7 +142,14 @@
     </UpdateParameters>
 </asp:SqlDataSource>
     <br />
-    <asp:Label ID="lblMensagem" runat="server" Font-Bold="True" Font-Size="X-Large" ForeColor="Red"></asp:Label>
+    <asp:Label ID="lblMensagem"
+        runat="server"
+        Font-Bold="True"
+        Font-Size="X-Large"
+        ForeColor="Red"
+        Text="A quantidade de Contatos nesta agenda é: ">
+
+    </asp:Label>
     <br />
-    <asp:Button ID="btnLimpar" runat="server" Text="Limpar" OnClick="btnLimpar_Click" />
+    <!--<asp:Button ID="btnLimpar" runat="server" Text="Limpar" OnClick="btnLimpar_Click" />-->
 </asp:Content>

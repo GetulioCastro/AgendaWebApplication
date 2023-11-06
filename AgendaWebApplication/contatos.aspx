@@ -23,22 +23,21 @@
     <asp:Button ID="btnInserir" runat="server" Text="Inserir" OnClick="btnInserir_Click" />
     <br />
     <br />
-    <asp:GridView ID="gvContatos" runat="server" DataSourceID="SqlDataSourceC" ProviderName="System.Data.SqlClient" AllowPaging="True">
+    <asp:GridView ID="gvContatos" runat="server" DataSourceID="SqlDataSourceC" DataKeyNames="Id" ProviderName="System.Data.SqlClient" AllowPaging="True" OnDataBinding="Page_Load" OnSelectedIndexChanged="gvContatos_SelectedIndexChanged">
         <Columns>
-            <asp:CommandField ShowSelectButton="True"></asp:CommandField>
             <asp:CommandField ShowEditButton="True"></asp:CommandField>
             <asp:CommandField ShowDeleteButton="true"></asp:CommandField>
         </Columns>
     </asp:GridView>
-    <asp:SqlDataSource runat="server" ID="SqlDataSourceC" ConnectionString="<%$ ConnectionStrings:AgendaDBConnectionString %>" SelectCommand="SELECT * FROM [Contato]" DeleteCommand="DELETE FROM [Contato] WHERE [Id] = @Id" UpdateCommand="UPDATE [Contato] SET [nome] = @nome, [email] = @email, [telefone] = @telefone WHERE [Id] = @Id" ProviderName="System.Data.SqlClient">
+    <asp:SqlDataSource runat="server" ID="SqlDataSourceC" ConnectionString="<%$ ConnectionStrings:AgendaDBConnectionString %>" SelectCommand="SELECT * FROM [Contato]" DeleteCommand="DELETE FROM [Contato] WHERE [Id] = @Id" UpdateCommand="UPDATE [Contato] SET [nome] = @nome, [email] = @email, [telefone] = @telefone WHERE [Id] = @Id" InsertCommand="INSERT INTO [Contato] ([nome], [email], [telefone]) VALUES (@nome, @email, @telefone)">
         <DeleteParameters>
             <asp:Parameter Name="Id" Type="Int32"></asp:Parameter>
         </deleteparameters>
         <UpdateParameters>
             <asp:Parameter Name="Id" Type="Int32"></asp:Parameter>
-            <asp:Parameter Name="Nome" Type="String"></asp:Parameter>
-            <asp:Parameter Name="Email" Type="String"></asp:Parameter>
-            <asp:Parameter Name="Telefone" Type="String"></asp:Parameter>
+            <asp:Parameter Name="nome" Type="String"></asp:Parameter>
+            <asp:Parameter Name="email" Type="String"></asp:Parameter>
+            <asp:Parameter Name="telefone" Type="String"></asp:Parameter>
         </UpdateParameters>
     </asp:SqlDataSource>
 

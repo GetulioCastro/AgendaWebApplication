@@ -1,5 +1,8 @@
 ﻿using System;
+using System.Data.SqlClient;
+using System.Web.UI;
 using System.Web.UI.WebControls;
+
 
 namespace AgendaWebApplication
 {
@@ -7,7 +10,26 @@ namespace AgendaWebApplication
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+            if (!IsPostBack)
+            {
+                string connectionString = System.Configuration.ConfigurationManager.ConnectionStrings["AgendaDBConnectionString"].ConnectionString;
+
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
+                    using (SqlCommand cmd = new SqlCommand("SELECT COUNT(*) AS TotalContatos FROM [Contato]", connection))
+                    {
+                        using (SqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                int totalContatos = Convert.ToInt32(reader["TotalContatos"]);
+                                lblMensagem.Text = "Total de contatos inseridos é: " + totalContatos.ToString();
+                            }
+                        }
+                    }
+                }
+            }
         }
 
         public void limparCampos()

@@ -35,3 +35,9 @@ footer {
     background-color: #B5C7DE;
     padding: 10px;
 }
+
+.selected-row{
+    background-color: yellow;
+    font-weight: bold;
+    color: darkblue;
+}

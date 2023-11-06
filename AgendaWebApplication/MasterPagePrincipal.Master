@@ -6,7 +6,7 @@
 <head runat="server">
     <meta charset="utf-8" />
     <title>Agenda WEB APP</title>
-    <link rel="stylesheet" href="/Estilo/Site.css" type="text/css" />
+    <link rel="stylesheet" href="~/Estilo/Site.css" type="text/css" />
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
